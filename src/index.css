@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #F23005;
+  --color-brand-dark: #0C0C0C;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
