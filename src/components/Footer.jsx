@@ -9,7 +9,7 @@ export default function Footer() {
           <img src={logo} alt="TK's Trucking Logo" className="h-[100px] w-auto" />
         </Link>
         
-        <div className="flex flex-wrap gap-8 text-brand-dark justify-center font-bold mb-16 text-[15px]">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-brand-dark items-center justify-center font-bold mb-16 text-[15px]">
           <Link to="/" className="hover:text-brand-primary transition-colors">Home</Link>
           <Link to="/trucking" className="hover:text-brand-primary transition-colors">Trucking</Link>
           <Link to="/excavation" className="hover:text-brand-primary transition-colors">Excavation</Link>
