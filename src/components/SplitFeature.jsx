@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import FadeIn from './FadeIn';
 
 export default function SplitFeature({
   tagline,
@@ -27,11 +28,14 @@ export default function SplitFeature({
   const bgClass = isDark ? 'bg-brand-dark' : 'bg-white';
   const textClass = isDark ? 'text-white' : 'text-brand-dark';
 
+  const textDirection = imagePosition === 'left' ? 'left' : 'right';
+  const imageDirection = imagePosition === 'left' ? 'right' : 'left';
+
   return (
     <section className={`py-16 md:py-24 px-5 md:px-8 flex justify-center ${bgClass} ${className}`}>
       <div className={`max-w-7xl w-full flex flex-col ${flexDir} gap-12 md:gap-16 lg:gap-20 items-center`}>
         {/* Text Column */}
-        <div className="w-full md:w-1/2 flex flex-col items-start order-1">
+        <FadeIn direction={textDirection} delay={0.1} className="w-full md:w-1/2 flex flex-col items-start order-1">
           {tagline && (
             <span className="font-bold text-xs uppercase tracking-widest text-brand-primary mb-3 md:mb-4 block">
               {tagline}
@@ -69,10 +73,10 @@ export default function SplitFeature({
               </Link>
             )
           )}
-        </div>
+        </FadeIn>
 
         {/* Image Column */}
-        <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-square relative order-2 flex-shrink-0">
+        <FadeIn direction={imageDirection} delay={0.2} className="w-full md:w-1/2 aspect-[4/3] md:aspect-square relative order-2 flex-shrink-0">
           {placeholder ? (
             <div className={`w-full h-full flex items-center justify-center border-4 rounded-2xl ${isDark ? 'border-white' : 'border-brand-dark'}`}>
               <span className={`font-bold uppercase tracking-widest ${textClass}`}>Image Placeholder</span>
@@ -82,7 +86,7 @@ export default function SplitFeature({
               <img src={imageSrc} alt={imageAlt} className={`absolute inset-0 w-full h-full ${imageObjectFit === 'contain' ? 'object-contain' : 'object-cover'}`} style={{ objectPosition: imageObjectPosition }} />
             </div>
           ) : null}
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

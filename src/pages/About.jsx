@@ -1,6 +1,7 @@
 import SimpleHero from '../components/SimpleHero';
 import SplitFeature from '../components/SplitFeature';
 import CallToAction from '../components/CallToAction';
+import FadeIn from '../components/FadeIn';
 
 import familyPhoto from '../assets/images/family_photo.jpg';
 import keithPhoto from '../assets/images/keith.webp';
@@ -39,12 +40,16 @@ export default function About() {
       {/* Meet the team */}
       <section className="bg-white py-16 md:py-24 px-5 md:px-8 w-full border-b-2 border-brand-dark">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-brand-dark mb-4 md:mb-6">
-            Meet the team
-          </h2>
-          <p className="text-base md:text-lg text-brand-dark font-medium mb-12 md:mb-20 max-w-2xl">
-            The people who built this company and keep it running strong
-          </p>
+          <FadeIn direction="up" delay={0.1}>
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-brand-dark mb-4 md:mb-6">
+              Meet the team
+            </h2>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.2}>
+            <p className="text-base md:text-lg text-brand-dark font-medium mb-12 md:mb-20 max-w-2xl">
+              The people who built this company and keep it running strong
+            </p>
+          </FadeIn>
 
           <div className="w-full flex flex-wrap justify-center gap-12 md:gap-8">
             {[
@@ -53,14 +58,14 @@ export default function About() {
               { name: "Janeen", title: "Office Manager",          photo: janeenPhoto },
               { name: "Jess",   title: "Operations Manager",      photo: jessPhoto },
               { name: "Jason",  title: "Health & Safety Advisor", photo: jasonPhoto },
-            ].map((member) => (
-              <div key={member.name} className="flex flex-col items-center text-center flex-[0_1_200px]">
+            ].map((member, idx) => (
+              <FadeIn key={member.name} direction="up" delay={0.1 * (idx + 1)} className="flex flex-col items-center text-center flex-[0_1_200px]">
                 <div className="w-full aspect-square max-w-[280px] md:max-w-none rounded-2xl mb-6 md:mb-8 overflow-hidden">
                   <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
                 </div>
                 <h4 className="text-lg md:text-xl font-bold text-brand-dark mb-1 md:mb-2">{member.name}</h4>
                 <p className="text-sm md:text-[15px] font-medium text-brand-dark">{member.title}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>

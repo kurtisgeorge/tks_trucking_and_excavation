@@ -3,6 +3,7 @@ import SplitFeature from '../components/SplitFeature';
 import FeatureGrid from '../components/FeatureGrid';
 import MapFeature from '../components/MapFeature';
 import CallToAction from '../components/CallToAction';
+import FadeIn from '../components/FadeIn';
 import { CalendarCheck, HardHat, Settings, Home as HomeIcon, ArrowRight } from 'lucide-react';
 
 import imgHero from '../assets/images/truck-fleet.jpg';
@@ -90,18 +91,26 @@ export default function Home() {
       {/* About Us Brief */}
       <section className="bg-white py-16 md:py-24 px-5 md:px-8 flex justify-center border-b-2 border-brand-dark">
         <div className="max-w-3xl w-full flex flex-col items-center text-center">
-          <div className="mb-4 md:mb-6 text-brand-primary">
-             <HomeIcon strokeWidth={2} className="w-12 h-12 md:w-16 md:h-16" />
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brand-dark mb-4 md:mb-6">
-            A family-run business
-          </h2>
-          <p className="text-base md:text-lg text-brand-dark leading-relaxed font-medium mb-8 md:mb-10 max-w-2xl">
-            TK's Trucking is a family operation rooted in reliability and respect. We move freight the way we'd want ours moved—with care, professionalism, and a commitment to getting it right.
-          </p>
-          <a href="/about" className="group inline-flex items-center text-brand-dark font-bold text-base md:text-lg hover:text-brand-primary transition-colors">
-            About us <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-          </a>
+          <FadeIn direction="up" delay={0.1}>
+            <div className="mb-4 md:mb-6 text-brand-primary">
+               <HomeIcon strokeWidth={2} className="w-12 h-12 md:w-16 md:h-16" />
+            </div>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.2}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-brand-dark mb-4 md:mb-6">
+              A family-run business
+            </h2>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.3}>
+            <p className="text-base md:text-lg text-brand-dark leading-relaxed font-medium mb-8 md:mb-10 max-w-2xl">
+              TK's Trucking is a family operation rooted in reliability and respect. We move freight the way we'd want ours moved—with care, professionalism, and a commitment to getting it right.
+            </p>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.4}>
+            <a href="/about" className="group inline-flex items-center text-brand-dark font-bold text-base md:text-lg hover:text-brand-primary transition-colors">
+              About us <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+            </a>
+          </FadeIn>
         </div>
       </section>
 
