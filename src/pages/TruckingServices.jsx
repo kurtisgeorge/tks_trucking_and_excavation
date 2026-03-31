@@ -10,12 +10,18 @@ export default function TruckingServices() {
     <div className="w-full flex flex-col font-sans">
       <SimpleHero 
         title="Trucking Services"
-        description="We move freight across Newfoundland to Ontario with the professionalism and reliability your business depends on. Semi-trucks and transport trucks ready for the job."
+        description="Reliable freight service across Newfoundland, Ontario, and Quebec, with all points in between. We specialize in LTL shipments, temperature-controlled freight, and dry freight services."
       />
 
       <SplitFeature 
         title="Freight that moves on time"
-        description="TK's Trucking & Excavation handles all types of freight with the same attention to detail and reliability that built our reputation. From construction materials to general cargo, we move what matters."
+        description="TK's Trucking & Excavation handles freight with the professionalism and reliability our customers depend on. From LTL shipments to temperature-controlled and dry freight, we move what matters safely and efficiently."
+        listItems={[
+          "Less-than-truckload shipments",
+          "Temperature-controlled freight",
+          "Dry freight services",
+          "NL–ON / QC return loads and all points in between"
+        ]}
         imageSrc={imgNight}
         imageAlt="City highway at night with light trails"
         imagePosition="left"

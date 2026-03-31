@@ -2,6 +2,13 @@ import SimpleHero from '../components/SimpleHero';
 import SplitFeature from '../components/SplitFeature';
 import CallToAction from '../components/CallToAction';
 
+import familyPhoto from '../assets/images/family_photo.jpg';
+import keithPhoto from '../assets/images/keith.webp';
+import tinaPhoto from '../assets/images/tina.webp';
+import janeenPhoto from '../assets/images/janeen.jpg';
+import jasonPhoto from '../assets/images/jason.jpg';
+import jessPhoto from '../assets/images/jess.jpg';
+
 export default function About() {
   return (
     <div className="w-full flex flex-col font-sans">
@@ -16,12 +23,14 @@ export default function About() {
         description="TK's Trucking started in Newfoundland with a simple commitment to do the work right and keep our word. Today we serve clients across Canada, but our values haven't changed."
         listItems={[
           "Family-owned and operated",
-          "Serving all of Canada with pride",
-          "Built on reliability and respect"
+          "Serving Eastern Canada with pride",
+          "Grounded in dependable service"
         ]}
-        placeholder={true}
+        imageSrc={familyPhoto}
+        imageAlt="The TK's Trucking family"
         imagePosition="right"
         theme="dark"
+        imageObjectFit="contain"
       />
 
       {/* Meet the team */}
@@ -34,14 +43,20 @@ export default function About() {
             The people who built this company and keep it running strong
           </p>
 
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="flex flex-col items-center text-center">
-                <div className="w-full aspect-square max-w-[280px] md:max-w-none bg-white border-2 border-brand-dark rounded-2xl mb-6 md:mb-8 flex items-center justify-center text-brand-dark">
-                  <span className="font-bold uppercase tracking-widest text-xs">Image</span>
+          <div className="w-full flex flex-wrap justify-center gap-12 md:gap-8">
+            {[
+              { name: "Keith",  title: "Owner",                   photo: keithPhoto },
+              { name: "Tina",   title: "Owner",                   photo: tinaPhoto },
+              { name: "Janeen", title: "Office Manager",          photo: janeenPhoto },
+              { name: "Jason",  title: "Health & Safety Advisor", photo: jasonPhoto },
+              { name: "Jess",   title: "Operations Manager",      photo: jessPhoto },
+            ].map((member) => (
+              <div key={member.name} className="flex flex-col items-center text-center flex-[0_1_200px]">
+                <div className="w-full aspect-square max-w-[280px] md:max-w-none rounded-2xl mb-6 md:mb-8 overflow-hidden">
+                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
                 </div>
-                <h4 className="text-lg md:text-xl font-bold text-brand-dark mb-1 md:mb-2">Full name</h4>
-                <p className="text-sm md:text-[15px] font-medium text-brand-dark">Job title</p>
+                <h4 className="text-lg md:text-xl font-bold text-brand-dark mb-1 md:mb-2">{member.name}</h4>
+                <p className="text-sm md:text-[15px] font-medium text-brand-dark">{member.title}</p>
               </div>
             ))}
           </div>

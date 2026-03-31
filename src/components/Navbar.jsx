@@ -10,19 +10,19 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-white w-full sticky top-0 z-40 drop-shadow-sm shadow-gray-500/50">
+      <header className="bg-white w-full fixed top-0 left-0 right-0 z-40 drop-shadow-sm shadow-gray-500/50">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="flex justify-between items-center h-20 md:h-24">
             
             {/* Left: Logo */}
-            <div className="flex-shrink-0 flex items-center">
+            <div className="flex-1 flex items-center">
               <Link to="/">
                 <img src={logo} alt="TK's Trucking Logo" className="h-[50px] md:h-[60px] w-auto" />
               </Link>
             </div>
 
             {/* Center: Desktop Navigation */}
-            <nav className="hidden md:flex flex-grow justify-center gap-8 font-bold text-[15px] text-brand-dark">
+            <nav className="hidden md:flex items-center justify-center gap-8 font-bold text-[15px] text-brand-dark">
               <Link to="/" className="hover:text-brand-primary transition-colors">Home</Link>
               <Link to="/about" className="hover:text-brand-primary transition-colors">About us</Link>
               <Link to="/trucking" className="hover:text-brand-primary transition-colors">Trucking</Link>
@@ -30,7 +30,7 @@ export default function Navbar() {
             </nav>
 
             {/* Right: Desktop Button & Mobile Toggle */}
-            <div className="flex items-center justify-end">
+            <div className="flex-1 flex items-center justify-end">
               <Link to="/contact" className="hidden md:flex bg-brand-primary text-white px-6 py-2.5 md:px-8 md:py-3 rounded-lg hover:-translate-y-0.5 transition-transform font-bold tracking-wide text-sm md:text-base shadow-sm">
                 Get in touch
               </Link>
@@ -72,7 +72,7 @@ export default function Navbar() {
         </div>
 
         <div className="mt-auto px-6 py-8 border-t border-brand-dark/10">
-          <Link to="/contact" onClick={toggleMenu} className="bg-brand-primary text-white px-8 py-3.5 rounded-lg hover:-translate-y-0.5 transition-transform font-bold tracking-wide text-[17px] shadow-sm w-full text-center block">
+          <Link to="/contact" onClick={toggleMenu} className="bg-brand-primary text-white px-6 py-2.5 md:px-8 md:py-3 rounded-lg hover:-translate-y-0.5 transition-transform font-bold tracking-wide text-[17px] shadow-sm w-full text-center block">
             Get in touch
           </Link>
         </div>

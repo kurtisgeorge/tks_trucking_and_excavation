@@ -13,7 +13,7 @@ export default function MapFeature({ tagline, title, description, imageSrc }) {
         </div>
         <div className="w-full md:w-1/2 w-full">
            {imageSrc && (
-             <div className="w-full aspect-[4/3] md:aspect-square relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white">
+             <div className="w-full aspect-[4/3] md:aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
                <img src={imageSrc} alt="Reach map" className="absolute inset-0 w-full h-full object-cover" />
              </div>
            )}

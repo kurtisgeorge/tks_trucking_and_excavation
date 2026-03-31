@@ -26,9 +26,9 @@ export default function Home() {
         title="Hauling solutions built for your needs"
         description="We handle a wide range of freight across Canada. From standard loads to specialized hauling, we have the capacity and expertise to move what matters."
         listItems={[
-          "General freight and bulk hauling",
-          "Cross-Canada transportation services",
-          "Flexible solutions for your logistics"
+          "Less-than-truckload (LTL) shipments",
+          "Temperature-controlled freight",
+          "Dry freight services"
         ]}
         buttonText="Trucking Services"
         buttonLink="/trucking"
@@ -45,8 +45,8 @@ export default function Home() {
         description="Whether it's preparing a site for construction or large-scale earthmoving, our modern fleet and experienced operators deliver reliable results."
         listItems={[
           "Site preparation and land clearing",
-          "Commercial and residential excavation",
-          "Aggregates and material transport"
+          "Trenching for utilities and drainage",
+          "Grading, levelling, and pad preparation"
         ]}
         buttonText="Excavation Services"
         buttonLink="/excavation"
@@ -55,6 +55,7 @@ export default function Home() {
         imagePosition="right"
         theme="dark"
         buttonVariant="link"
+        imageObjectPosition="center 80%"
       />
 
       <FeatureGrid 
@@ -64,17 +65,17 @@ export default function Home() {
           {
             icon: CalendarCheck,
             title: "Reliable service",
-            description: "We deliver dependable trucking and excavation services with a focus on safety, efficiency, and getting the job done right."
+            description: "On-time delivery and dependable operations, every load, every route. We do what we say we'll do."
           },
           {
             icon: HardHat,
             title: "Experienced staff",
-            description: "We deliver dependable trucking and excavation services with a focus on safety, efficiency, and getting the job done right."
+            description: "Skilled operators and trained drivers who take their work seriously and handle your freight or site with care."
           },
           {
             icon: Settings,
             title: "Modern equipment",
-            description: "We deliver dependable trucking and excavation services with a focus on safety, efficiency, and getting the job done right."
+            description: "Well-maintained trucks and excavation equipment, inspected regularly and ready for the job."
           }
         ]}
       />

@@ -1,3 +1,4 @@
+import { Phone, MapPin, ArrowRight, Clock } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 export default function Contact() {
@@ -14,39 +15,42 @@ export default function Contact() {
               Reach out for quotes, service inquiries, partnerships, or driving opportunities with TK's Trucking.
             </p>
             
-            <div className="flex flex-col gap-8 md:gap-10">
-              {/* Email */}
-              <div className="flex items-start gap-4 md:gap-5">
-                <div className="w-12 h-12 bg-white flex-shrink-0 flex items-center justify-center rounded-lg border-2 border-brand-dark text-brand-dark">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                </div>
-                <div className="pt-1">
-                  <p className="text-sm md:text-[15px] text-brand-dark font-bold uppercase tracking-wider mb-1">Email</p>
-                  <p className="text-brand-dark font-medium text-base md:text-lg">name@company.com</p>
-                </div>
-              </div>
-
+            <div className="flex flex-row flex-wrap gap-8 lg:flex-col lg:gap-10">
               {/* Phone */}
               <div className="flex items-start gap-4 md:gap-5">
                 <div className="w-12 h-12 bg-white flex-shrink-0 flex items-center justify-center rounded-lg border-2 border-brand-dark text-brand-dark">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <Phone size={24} />
                 </div>
                 <div className="pt-1">
-                  <p className="text-sm md:text-[15px] text-brand-dark font-bold uppercase tracking-wider mb-1">Phone number</p>
-                  <p className="text-brand-dark font-medium text-base md:text-lg">+1 (555) 000-0000</p>
+                  <p className="text-sm md:text-[15px] text-brand-dark font-bold uppercase tracking-wider mb-1">Phone</p>
+                  <p className="text-brand-dark font-medium text-base md:text-lg">Office: (709) 547-2342</p>
+                  <p className="text-brand-dark font-medium text-base md:text-lg">Fax: (709) 547-2585</p>
+                  <p className="text-brand-dark font-medium text-base md:text-lg">After hours: (709) 427-5650</p>
+                </div>
+              </div>
+
+              {/* Hours */}
+              <div className="flex items-start gap-4 md:gap-5">
+                <div className="w-12 h-12 bg-white flex-shrink-0 flex items-center justify-center rounded-lg border-2 border-brand-dark text-brand-dark">
+                  <Clock size={24} />
+                </div>
+                <div className="pt-1">
+                  <p className="text-sm md:text-[15px] text-brand-dark font-bold uppercase tracking-wider mb-1">Hours</p>
+                  <p className="text-brand-dark font-medium text-base md:text-lg">Mon – Fri</p>
+                  <p className="text-brand-dark font-medium text-base md:text-lg">9:00 AM – 5:00 PM</p>
                 </div>
               </div>
 
               {/* Location */}
               <div className="flex items-start gap-4 md:gap-5">
                 <div className="w-12 h-12 bg-white flex-shrink-0 flex items-center justify-center rounded-lg border-2 border-brand-dark text-brand-dark">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  <MapPin size={24} />
                 </div>
                 <div className="pt-1">
                   <p className="text-sm md:text-[15px] text-brand-dark font-bold uppercase tracking-wider mb-1">Location</p>
-                  <p className="text-brand-dark font-medium text-base md:text-lg mb-2">St John's, NL</p>
+                  <p className="text-brand-dark font-medium text-base md:text-lg mb-2">Clarenville, NL</p>
                   <a href="#" className="group inline-flex items-center font-bold text-brand-dark hover:text-brand-primary text-sm md:text-[15px] transition-colors">
-                    See on map <span className="ml-2 transition-transform group-hover:translate-x-1">-&gt;</span>
+                    See on map <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </a>
                 </div>
               </div>
@@ -54,7 +58,7 @@ export default function Contact() {
           </div>
           
           {/* Right Column (Form) */}
-          <div className="w-full lg:w-[55%]">
+          <div className="w-full lg:w-[55%] pt-0 md:pt-6">
             <ContactForm />
           </div>
         </div>

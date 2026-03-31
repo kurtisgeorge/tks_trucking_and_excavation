@@ -9,7 +9,7 @@ export default function FeatureGrid({ title, description, features = [] }) {
           {description}
         </p>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center">
+        <div className="w-full grid  grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center">
           {features.map((feature, idx) => {
              const Icon = feature.icon;
              return (
@@ -18,7 +18,7 @@ export default function FeatureGrid({ title, description, features = [] }) {
                    {Icon && <Icon strokeWidth={2} className="w-12 h-12 md:w-16 md:h-16" />}
                 </div>
                 <h4 className="text-xl md:text-2xl font-bold text-brand-dark mb-3 md:mb-4">{feature.title}</h4>
-                <p className="text-[15px] md:text-base text-brand-dark font-medium leading-relaxed">
+                <p className="text-[15px] md:text-base text-brand-dark font-medium leading-relaxed max-w-xs md:max-w-none">
                   {feature.description}
                 </p>
               </div>

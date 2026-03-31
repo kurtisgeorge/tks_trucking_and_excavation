@@ -3,19 +3,19 @@ import SplitFeature from '../components/SplitFeature';
 import CallToAction from '../components/CallToAction';
 
 import imgAerial from '../assets/images/construction-aerial.jpg';
-import imgCat from '../assets/images/cat-bulldozer.jpg';
+import imgCat from '../assets/images/cat-bulldozer.jpeg';
 
 export default function ExcavationServices() {
   return (
     <div className="w-full flex flex-col font-sans">
       <SimpleHero 
         title="Excavation Services"
-        description="Professional, dependable excavation for projects large and small. Serving Newfoundland to Ontario."
+        description="Professional, dependable excavation for projects large and small. Serving Clarenville and surrounding areas with experienced operators and well-maintained equipment."
       />
 
       <SplitFeature 
-        title="Modern machines, skilled hands"
-        description="We handle excavation work with the same professionalism and dependability that define TK's Trucking & Excavation. From site prep to heavy earthwork, we bring skilled operators and well-maintained equipment to every job."
+        title="Built on solid ground"
+        description="TK's Trucking & Excavation brings the same dependable service to excavation that built our name in trucking. From site preparation and trenching to grading and drainage work, we handle each job with care, precision, and a strong focus on safety."
         imageSrc={imgAerial}
         imageAlt="Aerial view of construction site"
         imagePosition="right"
@@ -25,11 +25,11 @@ export default function ExcavationServices() {
       <SplitFeature 
         tagline="Standards"
         title="Safety and quality"
-        description="We work to professional standards and regulatory requirements on every site. Our operators are trained, our equipment is maintained, and we take site safety seriously."
+        description="We work to professional standards on every site. Our operators are experienced, our equipment is maintained, and every project is approached with safety, communication, and dependable execution in mind."
         listItems={[
-          "Flexible scheduling and routing",
-          "Custom load planning and coordination",
-          "Direct communication with your team"
+          "Site preparation and land clearing",
+          "Trenching for utilities and drainage",
+          "Grading, levelling, and pad preparation"
         ]}
         imageSrc={imgCat}
         imageAlt="Close up of CAT bulldozer tracks"
@@ -38,9 +38,9 @@ export default function ExcavationServices() {
       />
 
       <CallToAction 
-        title="Ready to move your freight"
-        subtitle="Get a quote tailored to your hauling needs. Contact TK's Trucking today."
-        buttonText="Inquire"
+        title="Ready to get your site prepared?"
+        subtitle="Get a quote for excavation, grading, trenching, or site prep in Clarenville and surrounding areas."
+        buttonText="Request excavation quote"
         buttonLink="/contact"
       />
     </div>

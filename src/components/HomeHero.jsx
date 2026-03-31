@@ -10,7 +10,7 @@ export default function HomeHero({ title, description, buttonText, buttonLink, i
         <p className="text-base md:text-xl text-brand-dark font-medium leading-relaxed mb-10 max-w-2xl text-balance">
           {description}
         </p>
-        <Link to={buttonLink} className="bg-brand-primary text-white font-bold py-3 md:py-4 px-8 md:px-10 rounded-lg hover:-translate-y-1 transition-transform shadow-lg w-full sm:w-auto text-base md:text-[17px] inline-block">
+        <Link to={buttonLink} className="bg-brand-primary text-white font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-lg hover:-translate-y-1 transition-transform shadow-lg w-full sm:w-auto text-base md:text-[17px] inline-block">
           {buttonText}
         </Link>
       </div>

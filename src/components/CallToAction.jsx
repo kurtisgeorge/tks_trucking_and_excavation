@@ -10,7 +10,7 @@ export default function CallToAction({ title, subtitle, buttonText, buttonLink }
         <p className="text-base md:text-lg text-white font-medium leading-relaxed mb-8 md:mb-10">
           {subtitle}
         </p>
-        <Link to={buttonLink} className="inline-block w-full sm:w-auto text-center bg-brand-primary text-white font-bold py-3 md:py-4 px-8 md:px-10 rounded-lg hover:-translate-y-1 transition-transform shadow-lg text-base md:text-[17px]">
+        <Link to={buttonLink} className="inline-block w-full sm:w-auto text-center bg-brand-primary text-white font-bold py-2.5 md:py-3 px-6 md:px-8 rounded-lg hover:-translate-y-1 transition-transform shadow-lg text-base md:text-[17px]">
           {buttonText}
         </Link>
       </div>
