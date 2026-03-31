@@ -14,7 +14,7 @@ export default function ExcavationServices() {
       />
 
       <SplitFeature 
-        title="Built on solid ground"
+        title="From the ground up"
         description="TK's Trucking & Excavation brings the same dependable service to excavation that built our name in trucking. From site preparation and trenching to grading and drainage work, we handle each job with care, precision, and a strong focus on safety."
         imageSrc={imgAerial}
         imageAlt="Aerial view of construction site"
