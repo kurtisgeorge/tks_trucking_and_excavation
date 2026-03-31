@@ -14,7 +14,9 @@ export default function About() {
     <div className="w-full flex flex-col font-sans">
       <SimpleHero 
         title="About us"
-        description="Family-run since day one. Newfoundland roots. Ontario reach. Reputation earned."
+        description="What started as one truck and a vision has grown into a trusted family-run operation."
+        theme="dark"
+        compact
       />
 
       <SplitFeature 
@@ -31,6 +33,7 @@ export default function About() {
         imagePosition="right"
         theme="dark"
         imageObjectFit="contain"
+        className="!pt-4 md:!pt-6"
       />
 
       {/* Meet the team */}

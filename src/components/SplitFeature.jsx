@@ -16,7 +16,8 @@ export default function SplitFeature({
   titleTag = "h2",
   placeholder = false,
   imageObjectFit = "cover",
-  imageObjectPosition = "center"
+  imageObjectPosition = "center",
+  className = ""
 }) {
   const isDark = theme === 'dark';
   const flexDir = imagePosition === 'left' ? 'md:flex-row-reverse' : 'md:flex-row';
@@ -27,7 +28,7 @@ export default function SplitFeature({
   const textClass = isDark ? 'text-white' : 'text-brand-dark';
 
   return (
-    <section className={`py-16 md:py-24 px-5 md:px-8 flex justify-center ${bgClass}`}>
+    <section className={`py-16 md:py-24 px-5 md:px-8 flex justify-center ${bgClass} ${className}`}>
       <div className={`max-w-7xl w-full flex flex-col ${flexDir} gap-12 md:gap-16 lg:gap-20 items-center`}>
         {/* Text Column */}
         <div className="w-full md:w-1/2 flex flex-col items-start order-1">

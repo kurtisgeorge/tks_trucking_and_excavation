@@ -57,14 +57,14 @@ export default function Navbar() {
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center h-20 px-5 border-b border-brand-dark/10">
+        <div className="relative flex items-center justify-center h-20 px-5 border-b border-brand-dark/10">
           <img src={logo} alt="TK's Logo" className="h-[40px] w-auto" />
-          <button onClick={toggleMenu} className="text-brand-dark hover:text-brand-primary transition-colors focus:outline-none" aria-label="Close menu">
+          <button onClick={toggleMenu} className="absolute right-5 text-brand-dark hover:text-brand-primary transition-colors focus:outline-none" aria-label="Close menu">
             <X className="w-8 h-8" />
           </button>
         </div>
         
-        <div className="flex flex-col gap-6 px-6 py-8 font-bold text-xl text-brand-dark">
+        <div className="flex flex-col items-center gap-6 px-6 py-8 font-bold text-xl text-brand-dark">
           <Link to="/" onClick={toggleMenu} className="hover:text-brand-primary transition-colors">Home</Link>
           <Link to="/about" onClick={toggleMenu} className="hover:text-brand-primary transition-colors">About us</Link>
           <Link to="/trucking" onClick={toggleMenu} className="hover:text-brand-primary transition-colors">Trucking</Link>
