@@ -48,8 +48,8 @@ export default function About() {
               { name: "Keith",  title: "Owner",                   photo: keithPhoto },
               { name: "Tina",   title: "Owner",                   photo: tinaPhoto },
               { name: "Janeen", title: "Office Manager",          photo: janeenPhoto },
-              { name: "Jason",  title: "Health & Safety Advisor", photo: jasonPhoto },
               { name: "Jess",   title: "Operations Manager",      photo: jessPhoto },
+              { name: "Jason",  title: "Health & Safety Advisor", photo: jasonPhoto },
             ].map((member) => (
               <div key={member.name} className="flex flex-col items-center text-center flex-[0_1_200px]">
                 <div className="w-full aspect-square max-w-[280px] md:max-w-none rounded-2xl mb-6 md:mb-8 overflow-hidden">
