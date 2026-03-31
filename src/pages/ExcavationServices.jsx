@@ -40,7 +40,7 @@ export default function ExcavationServices() {
       <CallToAction 
         title="Ready to get your site prepared?"
         subtitle="Get a quote for excavation, grading, trenching, or site prep in Clarenville and surrounding areas."
-        buttonText="Request excavation quote"
+        buttonText="Get A Quote"
         buttonLink="/contact"
       />
     </div>

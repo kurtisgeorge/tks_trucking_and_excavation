@@ -16,7 +16,7 @@ export default function Home() {
       <HomeHero 
         title="Built on solid ground and reputation"
         description="TK's Trucking & Excavation serves clients across Newfoundland to Ontario with reliable transportation and excavation services. We move what matters and build what's needed."
-        buttonText="Quote"
+        buttonText="Get A Quote"
         buttonLink="/contact"
         imageSrc={imgHero}
       />
@@ -108,7 +108,7 @@ export default function Home() {
       <CallToAction 
         title="Ready to get started?"
         subtitle="Get a quote or discuss your transportation needs with our team."
-        buttonText="Quote"
+        buttonText="Get A Quote"
         buttonLink="/contact"
       />
     </div>
