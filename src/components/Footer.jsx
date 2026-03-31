@@ -3,7 +3,7 @@ import logo from '../assets/images/logo.png';
 
 export default function Footer() {
   return (
-    <footer className="bg-white pt-24 pb-12 px-8 mt-auto w-full border-t-2 border-brand-dark/20">
+    <footer className="bg-white pt-12 sm:pt-24 pb-12 px-8 mt-auto w-full border-t-2 border-brand-dark/20">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         <Link to="/" className="mb-8 block">
           <img src={logo} alt="TK's Trucking Logo" className="h-[100px] w-auto" />
