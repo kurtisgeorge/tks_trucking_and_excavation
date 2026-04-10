@@ -16,7 +16,7 @@ export default function MapFeature({ tagline, title, description, imageSrc }) {
         <FadeIn direction="left" delay={0.2} className="w-full md:w-1/2 w-full">
            {imageSrc && (
              <div className="w-full aspect-[4/3] md:aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
-               <img src={imageSrc} alt="Reach map" className="absolute inset-0 w-full h-full object-cover" />
+               <img src={imageSrc} alt="Reach map" className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
              </div>
            )}
         </FadeIn>

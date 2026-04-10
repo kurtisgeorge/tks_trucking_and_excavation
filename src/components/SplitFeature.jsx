@@ -83,7 +83,7 @@ export default function SplitFeature({
             </div>
           ) : imageSrc ? (
             <div className="w-full h-full rounded-2xl overflow-hidden relative shadow-2xl">
-              <img src={imageSrc} alt={imageAlt} className={`absolute inset-0 w-full h-full ${imageObjectFit === 'contain' ? 'object-contain' : 'object-cover'}`} style={{ objectPosition: imageObjectPosition }} />
+              <img src={imageSrc} alt={imageAlt} className={`absolute inset-0 w-full h-full ${imageObjectFit === 'contain' ? 'object-contain' : 'object-cover'}`} style={{ objectPosition: imageObjectPosition }} loading="lazy" decoding="async" />
             </div>
           ) : null}
         </FadeIn>

@@ -17,7 +17,7 @@ export default function Navbar() {
             {/* Left: Logo */}
             <div className="flex-1 flex items-center">
               <Link to="/">
-                <img src={logo} alt="TK's Trucking Logo" className="h-[50px] md:h-[60px] w-auto" />
+                <img src={logo} alt="TK's Trucking Logo" className="h-[50px] md:h-[60px] w-auto" decoding="async" />
               </Link>
             </div>
 
@@ -58,7 +58,7 @@ export default function Navbar() {
         }`}
       >
         <div className="relative flex items-center justify-center h-20 px-5 border-b border-brand-dark/10">
-          <img src={logo} alt="TK's Logo" className="h-[40px] w-auto" />
+          <img src={logo} alt="TK's Logo" className="h-[40px] w-auto" decoding="async" />
           <button onClick={toggleMenu} className="absolute right-5 text-brand-dark hover:text-brand-primary transition-colors focus:outline-none" aria-label="Close menu">
             <X className="w-8 h-8" />
           </button>

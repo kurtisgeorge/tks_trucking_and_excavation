@@ -4,8 +4,8 @@ import CallToAction from '../components/CallToAction';
 import FadeIn from '../components/FadeIn';
 
 import familyPhoto from '../assets/images/family_photo.jpg';
-import keithPhoto from '../assets/images/keith.webp';
-import tinaPhoto from '../assets/images/tina.webp';
+import keithPhoto from '../assets/images/keith.jpg';
+import tinaPhoto from '../assets/images/tina.jpg';
 import janeenPhoto from '../assets/images/janeen.jpg';
 import jasonPhoto from '../assets/images/jason.jpg';
 import jessPhoto from '../assets/images/jess.jpg';
@@ -61,7 +61,7 @@ export default function About() {
             ].map((member, idx) => (
               <FadeIn key={member.name} direction="up" delay={0.1 * (idx + 1)} className="flex flex-col items-center text-center flex-[0_1_200px]">
                 <div className="w-full aspect-square max-w-[280px] md:max-w-none rounded-2xl mb-6 md:mb-8 overflow-hidden">
-                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                  <img src={member.photo} alt={member.name} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <h4 className="text-lg md:text-xl font-bold text-brand-dark mb-1 md:mb-2">{member.name}</h4>
                 <p className="text-sm md:text-[15px] font-medium text-brand-dark">{member.title}</p>

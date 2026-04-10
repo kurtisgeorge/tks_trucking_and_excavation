@@ -24,7 +24,7 @@ export default function HomeHero({ title, description, buttonText, buttonLink, i
       <div className="w-full max-w-7xl mx-auto px-5 md:px-8">
         <FadeIn direction="up" delay={0.4}>
           <div className="w-full h-[300px] sm:h-[400px] md:h-[60vh] relative rounded-2xl overflow-hidden shadow-2xl">
-            <img src={imageSrc} alt="Hero" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={imageSrc} alt="Hero" className="absolute inset-0 w-full h-full object-cover" fetchpriority="high" decoding="async" />
           </div>
         </FadeIn>
       </div>
